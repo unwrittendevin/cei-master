@@ -1,0 +1,120 @@
+body{
+    font-weight: 300;
+}
+img{
+    max-width: 100%;
+}
+// Content wrapper
+.wrap {
+    padding: 0 2em 2em 2em;
+    @media (max-width: @screen-xs-max) {
+        padding: 0;        
+    }
+}
+#content-wrap{
+    padding: 1em 0;
+     @media (max-width: @screen-xs-max) {
+        padding: 1em;        
+    }
+}
+
+// Main content area
+.main { }
+
+
+#menu-primary-navigation.navbar-nav {
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    > li{
+        float: none;
+        display: inline-block;
+        a {
+            font-size: 1.5em;
+            font-weight: 300;
+            text-transform: uppercase;
+            display: block;
+            padding-left: 3em;
+            padding-right: 3em;
+            word-spacing: .1em;
+        }
+    }
+}
+ul#menu-footer-navigation.nav{
+    li{
+        float: left;
+        display: inline-block;
+        border-right: 1px solid @gray;
+        &:last-child{
+          border-right: none;
+        }
+        a{
+            padding: .1em 1em;
+        }
+    }
+    
+}
+.navbar.navbar-default{
+    margin-bottom: 0;
+}
+.slideshow{
+    background-color: @green-light;
+    .border-bottom-radius(20px);
+    border: 1px solid @gray-lighter;
+    border-top: none;
+    overflow: hidden;
+    @media (max-width: @screen-xs-max) {
+            border-radius: 0px;       
+    }
+    .carousel-content{
+        padding-right: 2em;
+        padding-top: 1em;
+        @media (max-width: @screen-xs-max) {
+            padding: 1em;        
+        }
+    }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  left: auto;
+  z-index: 15;
+  width: auto;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width:  1.5em;
+    height: 1.5em;
+    padding: 0 .25em;
+    margin: 4px;
+    text-indent: 0px;
+    border: 1px solid @carousel-indicator-border-color;
+    border-radius: 0;
+    cursor: pointer;
+    color: @white;
+
+    // IE8-9 hack for event handling
+    //
+    // Internet Explorer 8-9 does not support clicks on elements without a set
+    // `background-color`. We cannot use `filter` since that's not viewed as a
+    // background color by the browser. Thus, a hack is needed.
+    //
+    // For IE8, we set solid black as it doesn't support `rgba()`. For IE9, we
+    // set alpha transparency for the best results possible.
+    background-color: @gray; // IE9
+  }
+  .active {
+    margin: 4px;
+    width:  1.5em;
+    height: 1.5em;
+    background-color: @carousel-indicator-active-bg;
+  }
+}

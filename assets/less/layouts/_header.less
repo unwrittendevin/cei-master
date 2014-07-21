@@ -1,0 +1,93 @@
+#wrapper{
+    padding: 1em 0;
+}
+.banner {
+    padding: 1em 0 0 0;
+     @media (max-width: @screen-xs-max) {
+        padding: 0 1em;        
+    }
+}
+ul.social-nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    text-align: right;
+    li {
+        float: left;
+        margin-right: 1em;
+        a{
+            &:hover, &:focus, &.focused{
+                
+            }
+            i.fa-facebook{
+                color: @facebook-icon;
+                .transition(color ease-in-out .15s);
+                &:hover, &:focus, &.focused{
+                    color: darken(@facebook-icon, 10%);
+                }
+            }
+            i.fa-twitter{
+                color: @twitter-icon;
+                .transition(color ease-in-out .15s);
+                &:hover, &:focus, &.focused{
+                    color: darken(@twitter-icon, 10%);
+                }
+            }
+            i.fa-google-plus{
+                color: @gplus-icon;
+                .transition(color ease-in-out .15s);
+                &:hover, &:focus, &.focused{
+                    color: darken(@gplus-icon, 10%);
+                }
+            }
+            i.fa-pinterest{
+                color: @pinterest-icon;
+                .transition(color ease-in-out .15s);
+                &:hover, &:focus, &.focused{
+                    color: darken(@pinterest-icon, 10%);
+                }
+            }
+        }
+    }
+}
+#main-nav{
+    position: relative;
+    .left-banner{
+        position: absolute;
+        z-index: -1;
+        left: -27px;
+        bottom: -22px;
+    }
+    .right-banner{
+        position: absolute;
+        z-index: -1;
+        right: -27px;
+        bottom: -22px;
+    }
+}
+#branding{
+    padding-bottom: 2em;
+    #utility{
+        padding-top: 2em;
+    }
+}
+.search-input{
+    border-bottom: 1px solid @gray-light;
+    padding: 0;
+    color: @gray-light;
+    i{
+        margin-top: .25em;
+    }
+    .form-control{
+        border: none;
+        .box-shadow(inset 0 1px 1px rgba(255,255,255,.075));
+        width: 100%;
+        padding-right: 2.5em;
+        padding-left: .5em;
+    }
+    .form-control-feedback{
+        top: 0;
+    }
+    .form-control-feedback
+}

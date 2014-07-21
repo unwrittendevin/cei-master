@@ -1,0 +1,27 @@
+.sidebar {
+    padding-left: 5.75em;
+    padding-top: 1.5em;
+    .widget{
+        .box-shadow(0px 0px 5px rgba(72,186,3,.33));
+        padding: 1em;
+        border-radius: @border-radius-base;
+        margin-bottom: 1em;
+        h3{
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+    @media (max-width: @screen-xs-max) {
+        padding: 1em 0;        
+    }
+}
+a.rsswidget{
+    display: block;
+}
+.rss-date{
+    display: block;
+    font-size: @font-size-small;
+    font-style: italic;
+    color: @gray;
+}
+    
